@@ -9,19 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* sampled directly from the reference so the hero image blends seamlessly */
-    --cream:#F1E8E2;
-    --cream-deep:#EBE2D8;
-    --card:#E5D7CA;
-    --terracotta:#BE602F;
-    --terracotta-light:#D07D57;
-    --ink:#1A1916;
-    --ink-soft:#5C544C;
-    --rule:#DCD0C3;
+    /* Anthropic-leaning ivory; hero.png's background is recolored to match --cream
+       exactly, so the image has no visible edge */
+    --cream:#E9E7DC;
+    --cream-deep:#E1DED1;
+    --card:#DDDACB;
+    --terracotta:#B85C33;
+    --terracotta-light:#D97757;
+    --ink:#141413;
+    --ink-soft:#57534A;
+    --rule:#CFCBBB;
   }
- 
+
   *{box-sizing:border-box;margin:0;padding:0}
- 
+
   body{
     background:var(--cream);
     color:var(--ink);
@@ -30,13 +31,13 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
- 
+
   .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
   @media(max-width:700px){ .wrap{padding:0 22px} }
- 
+
   a{color:inherit}
   :focus-visible{outline:2px solid var(--terracotta);outline-offset:3px}
- 
+
   /* ---------- nav ---------- */
   .navband{background:var(--cream-deep);border-bottom:1px solid var(--rule)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
@@ -58,7 +59,7 @@
   }
   .connect:hover{background:#000}
   @media(max-width:860px){ .navlinks{display:none} }
- 
+
   /* ---------- hero ---------- */
   .hero{padding:0 0 40px}
   .herogrid{
@@ -86,7 +87,7 @@
   }
   .tick{width:44px;height:1px;background:var(--ink);opacity:.45;margin:26px 0}
   .lede{color:var(--ink-soft);max-width:44ch;font-size:17px}
- 
+
   /* the hero's action: the curriculum takes submissions */
   .submit{
     margin-top:34px;
@@ -120,23 +121,23 @@
   .msg{font-size:13.5px;margin-top:11px;min-height:19px}
   .msg.ok{color:var(--terracotta)}
   .msg.bad{color:#9E3B2A}
- 
+
   .scroll{
     margin-top:44px;
     color:var(--terracotta);font-size:14px;
     display:flex;align-items:center;gap:12px;
   }
   .scroll svg{display:block}
- 
+
   .heroimg{width:100%;height:auto;display:block}
- 
+
   @media(max-width:900px){
     .herogrid{grid-template-columns:1fr;gap:34px}
     .hero{padding-top:44px}
     .scroll{display:none}
     .submit{max-width:none}
   }
- 
+
   /* ---------- pipeline strip ---------- */
   .strip{
     border-top:1px solid var(--rule);
@@ -151,7 +152,7 @@
   }
   .stage.human b{color:var(--terracotta)}
   @media(max-width:760px){ .strip{grid-template-columns:1fr 1fr;gap:22px} }
- 
+
   /* ---------- sections ---------- */
   section.block{padding:88px 0;border-bottom:1px solid var(--rule)}
   .block h2{
@@ -165,7 +166,7 @@
   .prose{max-width:62ch;margin-top:22px}
   .prose p + p{margin-top:16px}
   .prose a{color:var(--terracotta);text-underline-offset:3px}
- 
+
   /* ---------- curriculum ---------- */
   .entries{margin-top:32px;display:grid;gap:14px}
   .entry{
@@ -185,12 +186,12 @@
   .status.reviewed{background:var(--terracotta);color:var(--cream)}
   .status.pending{background:transparent;color:var(--terracotta);border:1px solid var(--terracotta)}
   .state{color:var(--ink-soft);font-size:15px;margin-top:28px}
- 
+
   footer{padding:44px 0 72px;font-size:14px;color:var(--ink-soft)}
 </style>
 </head>
 <body>
- 
+
 <div class="navband">
   <div class="wrap nav">
     <a href="#" class="logo">CH</a>
@@ -199,7 +200,7 @@
       <a href="#curriculum">Curriculum</a>
       <a href="#submit">Submit a video</a>
     </div>
-    <a href="mailto:calilihall@gmail.com" class="connect">
+    <a href="mailto:YOUR-EMAIL@example.com" class="connect">
       Let's Connect
       <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
         <path d="M1 5h11M8.5 1.5 12.5 5l-4 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -207,17 +208,17 @@
     </a>
   </div>
 </div>
- 
+
 <div class="wrap hero">
   <div class="herogrid">
- 
+
     <div>
       <p class="hello">Hello, I'm</p>
       <h1>Calil Hall</h1>
       <p class="role">Self-taught. AI fluent. Building in public.</p>
       <div class="tick"></div>
       <p class="lede">I built AI Overview 0–100 for people like me — anyone trying to break out of using AI as a slightly better internet search. It's free, and it updates itself.</p>
- 
+
       <div class="submit" id="submit">
         <h2>Add a video to the curriculum</h2>
         <p class="note">Drop a YouTube link. The pipeline drafts a module from it — I review every one before it publishes.</p>
@@ -232,7 +233,7 @@
         </div>
         <p class="msg" id="msg" role="status"></p>
       </div>
- 
+
       <div class="scroll">
         Scroll to explore
         <svg width="10" height="24" viewBox="0 0 10 24" fill="none" aria-hidden="true">
@@ -240,12 +241,12 @@
         </svg>
       </div>
     </div>
- 
+
     <img class="heroimg" src="hero.png" alt="Calil Hall">
- 
+
   </div>
 </div>
- 
+
 <div class="wrap">
   <div class="strip" aria-label="Content pipeline">
     <div class="stage"><b>01 Source</b>YouTube, hand-picked</div>
@@ -255,9 +256,9 @@
     <div class="stage human"><b>05 Review</b>Me. Always.</div>
   </div>
 </div>
- 
+
 <div class="wrap">
- 
+
   <section class="block" id="about">
     <p class="sub">About</p>
     <h2>Why this exists</h2>
@@ -267,34 +268,34 @@
       <p>It's free, and it stays current on purpose. <a href="https://github.com/calil-hall/ai-overview-0-100">The code is on GitHub</a> if you want to see how it works.</p>
     </div>
   </section>
- 
+
   <section class="block" id="curriculum">
     <p class="sub">Pulled live from the source document</p>
     <h2>The curriculum</h2>
     <div id="entries" class="state">Loading entries…</div>
   </section>
- 
+
   <footer>
     Built with Claude, Gemini, ChatGPT, and Perplexity — reviewed and edited by me.
     Full diligence statement in the source document.
   </footer>
- 
+
 </div>
- 
+
 <script>
   // ---- Curriculum feed (Apps Script web app) ----
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxEWdEX-bob1IpFogdMpYI-P4za8Ds74-ebLxKdOLpqDGVflvjrYluIPRtkHyv3x8UaKQ/exec';
- 
+
   // ---- Google Form intake ----
   // Replace both. See the setup steps for how to find them.
   const FORM_ID = '1FAIpQLSeCH9LaYszdNbR4XqSNxNpAChWS9e9WRRBUmem3Se3FD8a_2w';
   const FORM_ENTRY_ID = 'entry.981289599';
- 
+
   const el = document.getElementById('entries');
   const esc = s => String(s).replace(/[&<>"']/g, c => (
     {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
   ));
- 
+
   function render(entries){
     if(!entries.length){
       el.className = 'state';
@@ -312,7 +313,7 @@
       </article>
     `).join('');
   }
- 
+
   async function load(){
     if(!APPS_SCRIPT_URL){
       el.textContent = 'Add your Apps Script URL to index.html to load entries.';
@@ -328,34 +329,34 @@
     }
   }
   load();
- 
+
   // ---- Submit box ----
   const input = document.getElementById('link');
   const send  = document.getElementById('send');
   const msg   = document.getElementById('msg');
- 
+
   // Mirrors the server-side check, so obvious mistakes never reach the Sheet.
   const isYouTube = url =>
     /^https?:\/\/(www\.)?(youtube\.com\/(watch\?|shorts\/)|youtu\.be\/)/i.test(url.trim());
- 
+
   function say(text, kind){
     msg.textContent = text;
     msg.className = 'msg' + (kind ? ' ' + kind : '');
   }
- 
+
   async function submitLink(){
     let url = input.value.trim();
     if(!url){ say('Paste a YouTube link first.', 'bad'); return; }
     if(!/^https?:\/\//i.test(url)) url = 'https://' + url;
     if(!isYouTube(url)){ say("That doesn't look like a YouTube link.", 'bad'); return; }
     if(FORM_ID.indexOf('PASTE') === 0){ say('Form not connected yet.', 'bad'); return; }
- 
+
     send.disabled = true;
     say('Sending…');
- 
+
     const body = new URLSearchParams();
     body.append(FORM_ENTRY_ID, url);
- 
+
     try{
       // no-cors: the request goes through, but the response is opaque —
       // we can confirm it was sent, not that it was accepted.
@@ -373,11 +374,10 @@
       send.disabled = false;
     }
   }
- 
+
   send.addEventListener('click', submitLink);
   input.addEventListener('keydown', e => { if(e.key === 'Enter') submitLink(); });
 </script>
- 
+
 </body>
 </html>
- 
