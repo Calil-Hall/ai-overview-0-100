@@ -11,14 +11,14 @@
   :root{
     /* Anthropic-leaning ivory; hero.png's background is recolored to match --cream
        exactly, so the image has no visible edge */
-    --cream:#E9E7DC;
-    --cream-deep:#E1DED1;
-    --card:#DDDACB;
+    --cream:#E3E1D6;
+    --cream-deep:#DAD7C9;
+    --card:#D7D4C4;
     --terracotta:#B85C33;
     --terracotta-light:#D97757;
     --ink:#141413;
-    --ink-soft:#57534A;
-    --rule:#CFCBBB;
+    --ink-soft:#46423A;
+    --rule:#C6C2B1;
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
@@ -27,8 +27,8 @@
     background:var(--cream);
     color:var(--ink);
     font-family:'Jost',system-ui,sans-serif;
-    font-size:17px;
-    line-height:1.6;
+    font-size:20px;
+    line-height:1.62;
     -webkit-font-smoothing:antialiased;
   }
 
@@ -43,18 +43,18 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
   .logo{
     font-family:'Playfair Display',Georgia,serif;
-    font-size:30px;font-weight:500;letter-spacing:-.02em;text-decoration:none;
+    font-size:33px;font-weight:500;letter-spacing:-.02em;text-decoration:none;
   }
   .navlinks{display:flex;gap:34px}
   .navlinks a{
-    text-decoration:none;font-size:15px;font-weight:400;
+    text-decoration:none;font-size:17px;font-weight:400;
     padding-bottom:2px;border-bottom:1px solid transparent;
   }
   .navlinks a:hover{border-bottom-color:var(--terracotta)}
   .connect{
     background:var(--ink);color:var(--cream);text-decoration:none;
-    font-size:14px;font-weight:500;
-    padding:13px 22px;border-radius:6px;
+    font-size:16px;font-weight:500;
+    padding:14px 24px;border-radius:6px;
     display:inline-flex;align-items:center;gap:9px;
   }
   .connect:hover{background:#000}
@@ -70,23 +70,23 @@
   }
   .hello{
     font-family:'Playfair Display',Georgia,serif;
-    font-size:26px;color:var(--terracotta);margin-bottom:2px;
+    font-size:30px;color:var(--terracotta);margin-bottom:2px;
   }
   h1{
     font-family:'Playfair Display',Georgia,serif;
     font-weight:500;
-    font-size:clamp(3.2rem,7.4vw,5.6rem);
+    font-size:clamp(3.5rem,7.8vw,6rem);
     line-height:.98;
     letter-spacing:-.015em;
   }
   .role{
     margin-top:18px;
     color:var(--terracotta);
-    font-weight:600;font-size:14px;
-    letter-spacing:.11em;text-transform:uppercase;
+    font-weight:600;font-size:17px;
+    letter-spacing:.1em;text-transform:uppercase;
   }
   .tick{width:44px;height:1px;background:var(--ink);opacity:.45;margin:26px 0}
-  .lede{color:var(--ink-soft);max-width:44ch;font-size:17px}
+  .lede{color:var(--ink-soft);max-width:42ch;font-size:22px}
 
   /* the hero's action: the curriculum takes submissions */
   .submit{
@@ -95,15 +95,15 @@
   }
   .submit h2{
     font-family:'Jost',sans-serif;
-    font-size:15px;font-weight:600;
-    letter-spacing:.03em;
-    margin-bottom:5px;
+    font-size:19px;font-weight:600;
+    letter-spacing:.02em;
+    margin-bottom:6px;
   }
-  .submit .note{font-size:14px;color:var(--ink-soft);margin-bottom:14px;line-height:1.5}
+  .submit .note{font-size:17px;color:var(--ink-soft);margin-bottom:16px;line-height:1.5}
   .row{display:flex;gap:9px}
   .row input{
     flex:1;min-width:0;
-    font-family:'Jost',sans-serif;font-size:15px;color:var(--ink);
+    font-family:'Jost',sans-serif;font-size:18px;color:var(--ink);
     background:rgba(255,255,255,.55);
     border:1px solid var(--rule);border-radius:6px;
     padding:13px 15px;
@@ -111,20 +111,20 @@
   .row input::placeholder{color:#9C9188}
   .row input:focus{border-color:var(--terracotta);background:#fff}
   .row button{
-    font-family:'Jost',sans-serif;font-size:14px;font-weight:500;
+    font-family:'Jost',sans-serif;font-size:17px;font-weight:500;
     background:var(--ink);color:var(--cream);
     border:0;border-radius:6px;padding:13px 22px;cursor:pointer;
     display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
   }
   .row button:hover{background:#000}
   .row button:disabled{opacity:.5;cursor:default}
-  .msg{font-size:13.5px;margin-top:11px;min-height:19px}
+  .msg{font-size:16px;margin-top:12px;min-height:22px}
   .msg.ok{color:var(--terracotta)}
   .msg.bad{color:#9E3B2A}
 
   .scroll{
     margin-top:44px;
-    color:var(--terracotta);font-size:14px;
+    color:var(--terracotta);font-size:16px;
     display:flex;align-items:center;gap:12px;
   }
   .scroll svg{display:block}
@@ -145,10 +145,10 @@
     padding:34px 0;
     display:grid;grid-template-columns:repeat(5,1fr);gap:16px;
   }
-  .stage{font-size:13px;color:var(--ink-soft)}
+  .stage{font-size:16px;color:var(--ink-soft)}
   .stage b{
     display:block;font-weight:600;color:var(--ink);
-    font-size:11px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:7px;
+    font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;
   }
   .stage.human b{color:var(--terracotta)}
   @media(max-width:760px){ .strip{grid-template-columns:1fr 1fr;gap:22px} }
@@ -157,10 +157,10 @@
   section.block{padding:88px 0;border-bottom:1px solid var(--rule)}
   .block h2{
     font-family:'Playfair Display',Georgia,serif;
-    font-weight:500;font-size:2.6rem;letter-spacing:-.01em;
+    font-weight:500;font-size:3.1rem;letter-spacing:-.01em;
   }
   .sub{
-    color:var(--terracotta);font-size:13px;font-weight:600;
+    color:var(--terracotta);font-size:15px;font-weight:600;
     letter-spacing:.11em;text-transform:uppercase;margin-bottom:12px;
   }
   .prose{max-width:62ch;margin-top:22px}
@@ -176,18 +176,32 @@
   }
   .entry h3{
     font-family:'Playfair Display',Georgia,serif;
-    font-size:1.4rem;font-weight:500;margin-bottom:9px;
+    font-size:1.7rem;font-weight:500;margin-bottom:10px;
   }
-  .entry p{color:var(--ink-soft);font-size:15.5px}
+  .entry p{color:var(--ink-soft);font-size:18.5px}
   .status{
-    font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
     display:inline-block;padding:4px 10px;border-radius:99px;margin-bottom:13px;
   }
   .status.reviewed{background:var(--terracotta);color:var(--cream)}
   .status.pending{background:transparent;color:var(--terracotta);border:1px solid var(--terracotta)}
-  .state{color:var(--ink-soft);font-size:15px;margin-top:28px}
+  .state{color:var(--ink-soft);font-size:18px;margin-top:28px}
 
-  footer{padding:44px 0 72px;font-size:14px;color:var(--ink-soft)}
+  /* ---------- embedded doc ---------- */
+  .docframe{
+    margin-top:28px;
+    border:1px solid var(--rule);border-radius:10px;overflow:hidden;
+    background:#fff;height:min(76vh,780px);
+  }
+  .docframe iframe{width:100%;height:100%;border:0;display:block}
+  .ghost{
+    display:inline-flex;align-items:center;gap:9px;margin-top:20px;
+    font-size:16px;font-weight:500;text-decoration:none;color:var(--ink);
+    border:1px solid var(--ink);border-radius:6px;padding:13px 22px;
+  }
+  .ghost:hover{background:var(--ink);color:var(--cream)}
+
+  footer{padding:52px 0 80px;font-size:17px;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -198,6 +212,7 @@
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#curriculum">Curriculum</a>
+      <a href="#doc">The doc</a>
       <a href="#submit">Submit a video</a>
     </div>
     <a href="mailto:calilihall@gmail.com" class="connect">
@@ -267,6 +282,23 @@
       <p>Everything here comes from my own learning: notes I wrote by hand, the exact videos I watched, and the exercises I worked through from scratch. I use Claude, Gemini, Perplexity, ChatGPT, and whatever else fits the task — because the training that got me here says to use every available tool and find the AI that excels at the job in front of you. I'd suggest you do the same.</p>
       <p>It's free, and it stays current on purpose. <a href="https://github.com/calil-hall/ai-overview-0-100">The code is on GitHub</a> if you want to see how it works.</p>
     </div>
+  </section>
+
+  <section class="block" id="doc">
+    <p class="sub">The full document</p>
+    <h2>Read the source</h2>
+    <div class="prose">
+      <p>Everything above is drawn from one Google Doc — the notes, the linked videos, the exercises, the diligence statement. This is a read-only copy of it, live.</p>
+    </div>
+    <div class="docframe">
+      <iframe src="https://docs.google.com/document/d/1GMLYxyz1xuZtVjeCHVEoGu82_FvGg3Z-0TUtuuSkl9g/preview" title="AI Overview 0–100 — source document" loading="lazy"></iframe>
+    </div>
+    <a class="ghost" href="https://docs.google.com/document/d/1GMLYxyz1xuZtVjeCHVEoGu82_FvGg3Z-0TUtuuSkl9g/preview" target="_blank" rel="noopener">
+      Open in a new tab
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+        <path d="M1 5h11M8.5 1.5 12.5 5l-4 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </section>
 
   <section class="block" id="curriculum">
