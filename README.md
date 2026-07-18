@@ -2,7 +2,7 @@
 
 A personal site and a live home for **AI Overview 0–100**, a self-updating AI literacy curriculum I built while learning AI from scratch.
 
-Hosted on **Railway**, deployed from this repository.
+Deployed from this repository.
 
 ---
 
