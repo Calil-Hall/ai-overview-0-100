@@ -4,6 +4,7 @@ A personal site and a live home for **AI Overview 0–100**, a self-updating AI 
 
 Deployed from this repository.
 
+Link: https://calil-hall.github.io/ai-overview-0-100/
 ---
 
 ## What this is
